@@ -1,0 +1,144 @@
+.booking-box {
+    border: 2px solid #D4AF37;
+    padding: 20px;
+}
+.booking-box:hover {
+    background-color: rgba(242, 242, 242, 0.45);
+}
+.booking-box .booking-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.booking-box .booking-header img {
+    width: 100%;
+}
+.booking-box h2 {
+    font-size: 24px;
+    line-height: 0.7;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+}
+.booking-box h5 {
+    font-size: 14px;
+    text-align: center;
+}
+.booking-box p {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+.booking-box .booking-price {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #D4AF37;
+    margin-bottom: 30px;
+}
+.booking-box .booking-price sup {
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+.booking-box a.btn {
+    text-align: center;
+    border-color: #D4AF37;
+    color: #D4AF37;
+}
+.booking-box a.btn:hover {
+    background-color: #D4AF37;
+    color: #fff;
+}
+.ftco-navbar-light {
+    position: relative;
+}
+.owl-carousel.home-slider0 .slider-item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 320px;
+    position: relative;
+    z-index: 0;
+}
+.owl-carousel.home-slider0 .owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+.owl-carousel.home-slider0 .owl-nav button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 40px 15px !important;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+}
+.owl-carousel.home-slider0 .owl-nav button.owl-prev {
+    border-radius: 0 5px 5px 0;
+}
+
+.owl-carousel.home-slider0 .owl-nav button.owl-next {
+    border-radius: 5px 0 0 5px;
+}
+.owl-carousel.home-slider .slider-item .slider-text h1.sm {
+    font-size: 39px;
+}
+.owl-carousel.home-slider .slider-item .slider-text h1.sm span {
+    font-size: 45px;
+}
+.ftco-counter {
+    padding: 1.5em 0;
+    position: fixed !important;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999 !important;
+}
+.ftco-counter h1 {
+    margin-bottom: 0;
+}
+.ftco-social {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 25px;
+}
+.ftco-social a {
+    font-size: 1.3em;
+}
+.ftco-about {
+    background-color: #061220;
+}
+.ftco-about h2,
+.ftco-about h3,
+.ftco-about a,
+.ftco-about a span {
+    color: #fff !important;
+}
+@media only screen and (max-width: 414px) {
+    .ftco-counter h1 {
+        font-size: 0.85em;
+    }
+    .ftco-about ul.about-info {
+        display: none !important;
+    }
+    .ftco-section {
+        padding: 0 !important;
+    }
+    .owl-carousel.home-slider .slider-item,
+    .owl-carousel.home-slider {
+        height: 420px !important;
+    }
+    .owl-carousel.home-slider .slider-item .slider-text h1,
+    .owl-carousel.home-slider .slider-item .slider-text h1.sm,
+    .owl-carousel.home-slider .slider-item .slider-text h1.sm span {
+        font-size: 24px !important;
+    }
+}
