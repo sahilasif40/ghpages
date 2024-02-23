@@ -79,27 +79,51 @@
 	
 
 	var carousel = function() {
+		$('.home-slider0').owlCarousel({
+			loop:true,
+			autoplay: true,
+			margin:0,
+			animateOut: 'fadeOut',
+			animateIn: 'fadeIn',
+			nav:true,
+			dots: false,
+			autoplayHoverPause: false,
+			items: 1,
+			autoHeight: false,
+			navText : ["<span class='fa fa-angle-left'></span>","<span class='fa fa-angle-right'></span>"],
+			responsive:{
+			  0:{
+				items:1
+			  },
+			  600:{
+				items:1
+			  },
+			  1000:{
+				items:1
+			  }
+			}
+		});
 		$('.home-slider').owlCarousel({
-	    loop:true,
-	    autoplay: true,
-	    margin:0,
-	    animateOut: 'fadeOut',
-	    animateIn: 'fadeIn',
-	    nav:false,
-	    autoplayHoverPause: false,
-	    items: 1,
-	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
-	    responsive:{
-	      0:{
-	        items:1
-	      },
-	      600:{
-	        items:1
-	      },
-	      1000:{
-	        items:1
-	      }
-	    }
+			loop:true,
+			autoplay: true,
+			margin:0,
+			animateOut: 'fadeOut',
+			animateIn: 'fadeIn',
+			nav:false,
+			autoplayHoverPause: false,
+			items: 1,
+			navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:1
+				},
+				1000:{
+					items:1
+				}
+			}
 		});
 		$('.carousel-testimony').owlCarousel({
 			center: true,
@@ -314,6 +338,32 @@ $(function() {
     return percentage / 100 * 360
 
   }
-
 });
+
+function bookingRequest(form, e) {
+	e.preventDefault();
+	var formData = $(form).serialize();
+	var formBtn = $(form).find('input[type=submit]');
+	$.ajax({
+		type: 'POST',
+		url: 'https://smartecommercelearning.com/amjadali_booking.php',
+		data: formData,
+		beforeSend: function () {
+			formBtn.attr('disabled', true);
+			formBtn.val('sending...');
+		},
+		success: function(response) {
+			swal(response).then(function () {
+				location.reload();
+			});
+		},
+		error: function(xhr, error) {
+			console.log(xhr, error);
+		},
+		complete: function () {
+			formBtn.removeAttr('disabled');
+			formBtn.val('Send Message');
+		}
+	});
+}
 
