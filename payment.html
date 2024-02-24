@@ -91,6 +91,16 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="date" class="form-control" placeholder="Date" name="date" required id="datePicker" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="time" class="form-control" placeholder="Time" name="time" required />
+                            </div>
+                        </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
@@ -223,6 +233,17 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script src="js/main.js"></script>
+<script>
+document.getElementById('datePicker').addEventListener('change', function() {
+    var selectedDate = new Date(this.value);
+    var currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0); // Set hours, minutes, seconds, and milliseconds to 0 for comparison
+    if (selectedDate < currentDate) {
+        alert('Please select a date greater than today.');
+        this.value = ''; // Clear the input value
+    }
+});
+</script>
 
 </body>
 </html>
