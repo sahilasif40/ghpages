@@ -159,7 +159,7 @@
     #contact-section {
         padding: 3em 0 !important;
     }
-    .owl-carousel.home-slider .slider-item .slider-text .one-third {
-        height: 720px !important;
+    .owl-carousel.home-slider .slider-item {
+        height: 400px !important;
     }
 }
